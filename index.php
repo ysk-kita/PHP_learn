@@ -7,5 +7,6 @@
             Echo Item:<input type="text" name="item" />
             <button type="submit">submit</button>
         </form>
+        <label><a href="sample1.php">sample1</a></label>
     </body>
 </html>
