@@ -4,7 +4,8 @@
     </head>
     <body>
         <form method="POST" action="echo.php">
-            Echo Item:<input type="text" name="item" />
+            zip:<input type="text" name="zip" /><br/>
+            address:<input type="text" name="address" /><br/>
             <button type="submit">submit</button>
         </form>
         <label><a href="sample1.php">sample1</a></label>

@@ -1,4 +1,4 @@
 <?php 
     $text = "hello\nWorld";
-    echo nl2br($text);
+    print nl2br($text);
 ?>
