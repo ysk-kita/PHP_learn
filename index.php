@@ -8,6 +8,7 @@
             address:<input type="text" name="address" /><br/>
             <button type="submit">submit</button>
         </form>
-        <label><a href="sample1.php">sample1</a></label>
+        <label><a href="sample1.php">sample1</a></label><br/>
+        <label><a href="sample2.php">sample2</a></label>
     </body>
 </html>
