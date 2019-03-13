@@ -3,7 +3,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <form method="POST" action="echo.php">
+        <form method="POST" action="directory_test/echo.php">
             zip:<input type="text" name="zip" /><br/>
             address:<input type="text" name="address" /><br/>
             <button type="submit">submit</button>
