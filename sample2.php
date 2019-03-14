@@ -8,7 +8,7 @@
         <body>
             <ul>
                 <li>text:$item1</li>
-                <li>text:$item2</li>
+                <li>text:{$item2}piyo</li>
                 <li>text:べた書き</li>
             </ul>
         </body>

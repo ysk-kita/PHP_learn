@@ -9,6 +9,7 @@
             <button type="submit">submit</button>
         </form>
         <label><a href="sample1.php">sample1</a></label><br/>
-        <label><a href="sample2.php">sample2</a></label>
+        <label><a href="sample2.php">sample2</a></label><br/>
+        <label><a href="calc.php">sample3</a></label><br/>
     </body>
 </html>
