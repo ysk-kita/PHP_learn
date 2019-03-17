@@ -5,19 +5,20 @@
         array("豚肉", 200)
     );
     $i = 0;
+    $j = 0;
     session_start();
     $_SESSION['array'] = $table_data;
 ?>
     
 <html>
-    <head><title>$title</title></head>
+    <head><title>calc input</title></head>
     <body>
         <form action="calc_confirm.php" method="POST" >
             <table>
                 <thead>
                     <tr>
                         <th>商品名</th>
-                        <th>値段  </th>
+                        <th>値段(円)</th>
                         <th>数量  </th>
                     </tr>
                 </thead>
@@ -26,7 +27,9 @@
                     <tr>
                         <?php foreach($row as $cel): ?>
                             <td><?= $cel ?></td>
-                        <?php endforeach; ?>
+                        <?php
+                            $j++;
+                            endforeach; ?>
                         <td><input type="number" name=<?php echo 'quantity'.$i; ?> /></td>
                     </tr>
                 <?php 
