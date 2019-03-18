@@ -10,6 +10,7 @@
         </form>
         <label><a href="sample1.php">sample1</a></label><br/>
         <label><a href="sample2.php">sample2</a></label><br/>
-        <label><a href="calc.php">sample3</a></label><br/>
+        <label><a href="sample3.php">sample3</a></label><br/>
+        <label><a href="calc.php">calc</a></label><br/>
     </body>
 </html>
