@@ -12,6 +12,7 @@
         <label><a href="sample2.php">sample2</a></label><br/>
         <label><a href="sample3.php">sample3</a></label><br/>
         <label><a href="sample4.php">sample4</a></label><br/>
+        <label><a href="sample5.php">sample5</a></label><br/>
         <label><a href="calc.php">calc</a></label><br/>
     </body>
 </html>
