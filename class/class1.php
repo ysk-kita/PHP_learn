@@ -1,7 +1,7 @@
 <?php 
 class Item {
     public $name;
-    private $ingredient = array();
+    protected $ingredient = array();
 
     public function setIngredient(array $arrays){
         $this->ingredient = $arrays;
@@ -21,6 +21,16 @@ class Item {
         $this->name = $name;
         $this->ingredient = $ingredient;
     }
-
 }
+# クラスの継承 
+class Item2nd extends Item {
+    # Override
+    public function printData(){
+        print nl2br("\r\n");
+        print "2nd";
+        print $this->name."\r\n";
+        print implode(',',$this->ingredient);
+    }
+}
+
 ?>

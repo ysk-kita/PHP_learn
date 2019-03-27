@@ -19,6 +19,9 @@
         print "Sample Error:".$e->getMessage();
     }
     */
+    
+    $ramen2nd = new Item2nd('ramen',array('noodle','soup'));
+    $ramen2nd->printData();
     getFooter();
 
 ?>
