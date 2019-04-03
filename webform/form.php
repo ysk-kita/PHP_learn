@@ -14,19 +14,26 @@
         _HTML_;
     }
 */
+
+    $array = array('hoge','piyo','fuga','poyo');
+    
+
     # 上はif-elseで表示を切り替えるけど、下はformを維持しつつ、post送信した値のみを表示
+    $arrayText = getSelectBox($array);
     print<<<_HTML_
         <form method="POST" action="$_SERVER[PHP_SELF]"> 
             Your name:<input type="text" name="my_name" /><br/>
             Your age:<input type="text" name="my_age" /><br/>
             <select name="category">
-                <option>val1</option>
-                <option>val2</option>
+                $arrayText
             </select><br/>            
             <button type="submit">submit</button>
         </form>
     _HTML_;
-    $str = $_POST['my_name'] ?? "" ;
+    # strip_tagsを使うことで、htmlタグを削除できる
+    // $str = strip_tags($_POST['my_name']) ?? "" ;
+    # strip_tagsは<>等を消してしまうので、htmlentitiesで無効化するほうが良い
+    $str = htmlentities($_POST['my_name']) ?? "" ;
     print nl2br("name:[".$str."]\r\n");
     
     $str2 = $_POST['category'] ?? "" ;
@@ -39,6 +46,14 @@
     }
     
     print $errors;
+
+    function getSelectBox($options){
+        $text = '';
+        foreach($options as $option){
+            $text .="<option>$option</option>";
+        }
+        return $text;
+    }
 
 ?>
 
