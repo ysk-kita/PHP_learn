@@ -16,6 +16,7 @@
             <li><label><a href="sample5.php">sample5</a></label></li>
             <li><label><a href="webform/form.php">WebForm</a></label></li>
             <li><label><a href="calc.php">calc</a></label></li>
+            <li><label><a href="dbAccess.php">DBTest</a></label></li>
         </ul>
     </body>
 </html>
