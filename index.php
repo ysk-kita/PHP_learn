@@ -17,6 +17,7 @@
             <li><label><a href="webform/form.php">WebForm</a></label></li>
             <li><label><a href="calc.php">calc</a></label></li>
             <li><label><a href="dbAccess.php">DBTest</a></label></li>
+            <li><label><a href="dbInsert.php">DBinsert</a></label></li>
         </ul>
     </body>
 </html>
