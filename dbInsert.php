@@ -22,8 +22,6 @@
         if(is_null($price)|| $price == false ){
             $errors += array("<p style='color: #ff0000'>please input price</p>");
         }
-        
-        
         # TODO error文が同時表示されない問題の解決
         
         // エラー配列が空なら、DB登録する
@@ -36,11 +34,39 @@
         }
     }
 
+
+    # data表示
+    selectDishes();
+
+
+
+    function getPDO(){
+        return new PDO("mysql:host=127.0.0.1; port=3306; dbname=Schema190417; charset=utf8", "root", "");
+    }
+
+    function selectDishes(){
+        try{
+            $pdo = getPDO();
+            
+            $query = $pdo->query('SELECT dish_name, price FROM dishes');
+            
+            while($row = $query->fetch()){
+                print "$row[dish_name], $row[price] \n";
+            }
+            
+        }catch (PDOException $e){
+            print('Error:'.$e->getMessage());
+            die();
+        }
+        
+        
+    }
+
     function insertDishes($dish_name, $price){
         try{
             // dbNameで指定したデータベース(スキーマ)にアクセスする。
             // 実際に稼働させるときは環境変数で指定
-            $mysqlPdo = new PDO("mysql:host=127.0.0.1; port=3306; dbname=Schema190417; charset=utf8", "root", "");
+            $mysqlPdo = getPDO();
 
             // sql実行エラーが起きた場合の対応に「ERRMODE_EXCEPTION」(例外をスローする)を指定
             $mysqlPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
