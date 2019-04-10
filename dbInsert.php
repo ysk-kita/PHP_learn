@@ -38,27 +38,25 @@
     # data表示
     selectDishes();
 
-
-
     function getPDO(){
         return new PDO("mysql:host=127.0.0.1; port=3306; dbname=Schema190417; charset=utf8", "root", "");
     }
 
     function selectDishes(){
+        print "<table>";
         try{
+            // select型で実行
             $pdo = getPDO();
-            
             $query = $pdo->query('SELECT dish_name, price FROM dishes');
-            
-            while($row = $query->fetch()){
-                print "$row[dish_name], $row[price] \n";
+            // オブジェクト型でselect結果を扱う
+            while($row = $query->fetch(PDO::FETCH_OBJ)){
+                echo ("<tr><td>{$row->dish_name}</td><td>{$row->price}</td></tr>");
             }
-            
         }catch (PDOException $e){
             print('Error:'.$e->getMessage());
             die();
         }
-        
+        print "</table>";
         
     }
 
