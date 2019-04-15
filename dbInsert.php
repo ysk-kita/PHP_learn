@@ -39,7 +39,7 @@
     selectDishes();
 
     function getPDO(){
-        return new PDO("mysql:host=127.0.0.1; port=3306; dbname=Schema190417; charset=utf8", "root", "");
+        return new PDO("mysql:host=127.0.0.1; port=3306; dbname=Schema190407; charset=utf8", "root", "");
     }
 
     function selectDishes(){
